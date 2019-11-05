@@ -1,0 +1,661 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: none;
+	color: #222;
+	background: url(../images/stone-texture-0291.jpg) repeat;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	color: #336600;
+}
+
+a:hover,
+a:active{
+	color: #fff;
+}
+
+p{
+    text-indent: 20px;
+    font-size: 16px;
+}
+
+figcaption{
+    color: #360;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    text-indent: 20px;
+    margin: 5px;
+}
+
+.wrapper{
+	height: 100%;
+}
+
+/*====================
+   Header
+===================*/
+
+.navbar-default {
+    height: 90px;
+}
+
+/*  Menu  */
+
+.navbar-collapse {
+    padding-top: 20px;
+}
+
+.nav-pills {
+    font-size: 18px;
+}
+
+.nav-pills > li > a {
+    border-radius: 5px;	
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #ffffff;
+  background-color: #336600;
+}
+
+.nav > li > a:hover {
+    background-color: #336600;    
+}
+
+/*  Search form  */
+
+.navbar-form{
+	top: 25px;
+}
+
+ .glyphicon-search {
+    font-size: 19px;
+    color: #336600;
+    font-weight: bold;
+}
+
+.form-control {
+  height: 35px;
+  color: #336600;
+  background-color: #ffffff;
+  border: 1px solid #336600;
+  border-radius: 5px;
+  }
+  
+.form-control:focus {
+  border-color: #336600;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(51, 102, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(51,102,0,.075), 0 0 8px rgba(51, 102, 0, 0.6);
+}
+
+.btn {
+   line-height: 1;
+  border-radius: 5px;  
+}
+
+.btn-default {
+  background-color: #ffffff;
+  border-color: #336600;
+}
+.btn-default:focus,
+.btn-default.focus {
+  background-color: #7ebc7d;
+  border-color: #336600;
+}
+.btn-default:hover {
+  background-color: #7ebc7d;
+  border-color: #336600;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-color: #7ebc7d;
+  border-color: #336600;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+  background-color: #e7e7e7;
+  border-color: #336600;
+}
+
+.form-control::-moz-placeholder {
+  color: #7ebc7d;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #7ebc7d;
+}
+.form-control::-webkit-input-placeholder {
+  color: #7ebc7d;
+}
+/*====================
+   Slider-carousel
+===================*/
+
+.slideshow{
+	width: 100%;
+	height: 700px;
+	margin-bottom: 20px;
+}
+
+.item{
+    text-align: center;
+    height: 660px;
+	margin-bottom: 20px;    
+}
+
+.item img{
+	width: 100%;
+}
+
+.carousel{
+    margin-top: 20px;
+}
+
+.carousel-caption{
+    background-color: #000;
+    opacity: 0.75;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    
+}
+
+.carousel-caption h2{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: bold; 
+}
+
+.carousel-post-title>a{
+    text-shadow: #fff 1px 1px 0,
+        #fff 2px 2px 0;
+}
+
+.carousel-post-title {
+	font-family: 'Abril Fatface', serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.carousel-post-title>a:hover{
+    color: #fff;
+    text-shadow: #336600 1px 1px 0,
+        #336600 2px 2px 0;
+}
+
+.carousel-indicators {
+   display: none;
+}
+
+/*====================
+  Post on front page
+  ===================*/
+
+.post-block {
+  margin: 20px 0 20px 0;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  position: relative;
+  cursor: default;
+  border-radius: 2px;
+}
+
+a:hover{
+  text-decoration:none;    
+}
+
+.post-block .figure {
+  position: relative;
+}
+
+.post-block .figure img {
+  width: 100%;
+  height:650px;
+}
+
+
+.post-block-content{
+    width: 100%;
+    background: #000;
+    opacity: 0.75;
+    border: 0;
+    position: absolute;
+    bottom: 0px;
+    padding: 40px 40px 40px;
+    text-align: center;
+}
+
+/*  Date and comments  */
+
+.post-meta-top { 
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 1px;
+	text-align: center; 
+    font-weight: bold;
+	margin-bottom: 30px;	
+}
+
+.sep { 
+	color: #fff;
+	margin: 0px 5px; 
+	font-weight: bold;
+}
+
+.post-meta-top>.fa{
+    padding-right: 10px; 
+    font-size: 18px;
+}
+.post-meta-top>a>.fa{
+    padding-right: 10px;  
+    font-size: 18px;
+    font-weight: bold;
+}
+/*  Post theme  */
+
+.post-block-content h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: bold;    
+}
+
+.post-title>a{
+    text-shadow: #fff 1px 1px 0;
+}
+
+.post-title {
+	font-family: 'Abril Fatface', serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.post-title>a:hover{
+    color: #fff;
+    text-shadow: #336600 1px 1px 0;
+}
+
+
+/*====================
+  Pagination
+===================*/
+
+.pagination{
+    font-size: 16px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 14px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #336600;
+  background-color: #ffffff;
+  border: 1px solid #336600;
+  margin-left: -1px;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  z-index: 2;
+  color: #fff;
+  background-color: #336600;
+  border-color: #336600;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 3;
+  color: #ffffff;
+  background-color: #336600;
+  border-color: #336600;
+  cursor: default;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #336600;
+  background-color: #ffffff;
+  border-color: #336600;
+  cursor: not-allowed;
+}
+/*====================
+   Post page
+===================*/
+
+.main{
+	width: 100%;
+	height: 700px;
+	margin: 0 auto;
+}
+.article {
+    float: left;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.post-main{
+    width: 85%;
+    height: auto;;
+    margin: 0 auto;
+    top: -10em;
+    position: relative;
+    z-index: 200;
+    background: #fff;
+    padding: 2em;
+}
+
+.post-main h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: #336600;
+}
+
+/*  Post header  */
+
+.post-head{
+    height: 70px;    
+}
+
+.date-post{
+    float: left;
+    font-size: 0.9em;
+	letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.post-author{
+    float: left;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+.post-author>a:active,
+.post-author>a:hover{
+    color: #7ebc7d;
+}
+
+.social-icon-head{
+    float: right;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.social-icon-head li{
+	float: left;
+	padding: 15px;
+}
+
+.social-icon-head li>a>i{
+    font-size: 25px;   
+}
+
+.social-icon-head li>a:hover,
+.social-icon-head li>a:active{
+    color: #7ebc7d;
+}
+
+/*  Post edit  */
+
+h3{
+    color: #360;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+/*  Blockquote */
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-style: double;
+    border-color: #336600;
+    background: #e7e7e7;
+  }
+
+blockquote>p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #336600;
+}
+
+blockquote>p>cite {
+    padding-top: 20px;
+    display: block;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    font-style: normal;
+    font-family: 'Abril Fatface', serif;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/*  Comments */
+
+.comments{
+    
+}
+
+.comments-title{
+    text-align: center;
+}
+
+.media-list{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.comments .media-body {
+    padding: 45px 0px 10px 25px;
+}
+
+.comments h4 {
+    margin-bottom: 10px;
+    color: #360;
+}
+
+.comments .media-heading span {
+    margin-left: 20px;
+    font-size: 12px;
+    color: #7ebc7d;
+}
+
+.comments .media-body a {
+    padding: 10px 10px;   
+}
+
+.comments .media-body a:hover,
+.comments .media-body a:active{
+    color: #fff;
+    background: #360;
+    border-radius: 5px;
+}
+
+.media-list li{
+    margin-bottom: 30px;
+}
+
+.media-left img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 5px solid #f1f1f1;     
+}
+
+
+
+/* Comments form */
+
+.blog-form .form-control {
+    margin-bottom: 15px;
+    border: 1px solid 7ebc7d;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    border-radius: 5px;
+}
+.blog-form input {
+    height: 45px;
+}
+
+.blog-form .form-control:hover {
+    border: 1px solid #360;
+    background-color: #7ebc7d;
+}
+
+.left_contact input[type=text]:hover, textarea:hover {
+    border: 1px #360;
+    background-color:#7ebc7d;
+}
+/* Button submit */
+.btn-main {
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: medium none;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid#336600;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 1.42857;
+    background: #fff;
+    color: #360;
+    font-weight: 700;
+    margin-top: 30px;
+    text-transform: capitalize!important;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.btn-main:hover,
+.btn-main:active{
+    background-color: #360;
+    color: #fff;
+}
+/*====================
+    Widgets
+===================*/
+
+.widget-area {
+    overflow: hidden;
+    padding: 30px 0px 50px;
+    border-bottom: 1px solid #336600;
+    background: none repeat scroll 0% 0% #e7e7e7;
+}
+
+.widget-left{
+    float: left;
+    margin: 0; 
+ }
+
+
+
+.widget-right{
+    float: right;
+    margin: 0; 
+}
+
+.widget-title {
+	font-family: 'Abril Fatface', serif;
+	font-size: 18px;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #336600;
+	text-align: center;
+}
+
+.text-widget{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color: #000;
+	width: 33%;
+    text-align: center;
+}
+	
+.social-icon {
+    float: left;
+    padding:10px;
+}	
+
+.social-icon li{
+	float: left;
+	padding: 25px;
+}
+
+.social-icon li>a>i{
+    font-size: 35px;   
+}
+
+.social-icon li>a:hover,
+.social-icon li>a:active{
+    color: #7ebc7d;
+}
+
+/*====================
+  Footer
+===================*/
+
+.footer {
+    display: block;
+    overflow: hidden;
+    background: #7ebc7d;
+    border-top: 1px solid #555;
+    height: 40px;
+	top: -40px;
+  
+}
+.footer p {
+    font-size: 18px;
+    color: #336600;
+   text-align: center;
+    margin-top: 10px;    
+}
+
+
