@@ -25,9 +25,7 @@ register_sidebar(array(
     'after_title' => '</h3>',
     ));
 	
-/**
-* комментарии
-*/
+
 
 
  
