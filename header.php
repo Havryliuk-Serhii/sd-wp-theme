@@ -1,7 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 	<meta name="author" content="">
@@ -10,50 +10,38 @@
 	<title><?php wp_title(); ?><?php bloginfo('name'); ?></title>
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" title="favicon">
 	<?php wp_head(); ?>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<div id="header">
-		<nav class="navbar navbar-default">
+	<div class="wrapper">
+		<!-- Header -->
+		<div class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
 					</button>
-						<a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="logo"></a>
-						
+					<a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="logo"></a>
 				</div>
-
-				<div id="navbarCollapse" class="collapse navbar-collapse">
-					<div class="row">
-						<div class="col-md-9">
-							<div class="col-md-8">
-								<ul class="nav nav-pills">
-									<?php if ( has_nav_menu( 'primary' ) ) {wp_nav_menu( array( 
-											'container' => '', 
-											'items_wrap' => '%3$s',
-											'theme_location' => 'primary'
-											) ); }
-										else {wp_list_pages( array(
-											'container' => '',
-											'title_li' => ''
-											));
-									} ?>
-								</ul>	
-							</div>
-							<div class="col-md-3-search">		
-								<form role="search" class="navbar-form navbar-right" method="get" action="#">
-									<div class="form-group">
-										<input class="search-txt" type="text" name="s" value="Найти">
-										<input class="search-img" type="image" src="<?php bloginfo('template_url'); ?>/images/search-icon.png" alt="search-icon">
-									</div>
-								</form>
-							</div>	
-						</div>	
-					</div>
-				</div>
+			<!-- Menu -->
+				<div  class="navbar-collapse collapse navbar-right">
+					<?php wp_nav_menu( array(
+								'theme_location' => 'primary',
+								'container' => false, 
+								'menu_class' => 'nav nav-pills',			
+							) );
+						?>
+				</div>				
 			</div>
-		</nav>
-	</div>
+		</div>
+		
+
+				

@@ -237,7 +237,6 @@ a:hover{
   height:650px;
 }
 
-
 .post-block-content{
     width: 100%;
     background: #000;
@@ -475,10 +474,6 @@ blockquote>p>cite {
 }
 
 /*  Comments */
-
-.comments{
-    
-}
 
 .comments-title{
     text-align: center;
