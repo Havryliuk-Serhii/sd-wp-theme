@@ -44,87 +44,31 @@
 							</div>							
 						</div>
 						<!-- Post -->
+						<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 						<div class="post-block inverse">
 							<div class="figure">
-								<a href="single-post.html"><img src="images/grass-1.jpg" alt=""></a>
+								<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 								<div class="post-block-content">
 									<div class="card-meta">
-										<!-- Date and comments -->
 										<div class="post-meta-top">
-										<i class="fa fa-user-o" aria-hidden="true"></i>
-										админ
-										<span class="sep">/</span>
-										  <i class="fa fa-calendar-o" aria-hidden="true"></i>24 августа 2015		
-											<span class="sep">/</span><i class="fa fa-comment-o" aria-hidden="true"></i> 1 комментарий 	
+											<i class="fa fa-user" aria-hidden="true"></i> <?php the_author(); ?>
+											<span class="sep">/</span>
+										  <i class="fa fa-calendar-o" aria-hidden="true"></i><?php the_time('j M, Y')?>		
+											<span class="sep">/</span><i class="fa fa-comment-o" aria-hidden="true"></i> <?php comments_popup_link('нет коментариев', '1 коментаний', '% коментариев')?>	
 										</div>
-									    <h2 class="post-title"><a href="single-post.html">Hello world!</a></h2>
+									    <h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 								    </div>
 							    </div>	
 						    </div>
 						</div>
-						<div class="post-block inverse">
-							<div class="figure">
-								<a href="single-post.html"><img src="images/jardinier.jpg" alt=""></a>
-								<div class="post-block-content">
-									<div class="card-meta">
-										<!-- Date and comments -->
-										<div class="post-meta-top">
-										<i class="fa fa-user-o" aria-hidden="true"></i>
-										админ
-										<span class="sep">/</span>
-										  <i class="fa fa-calendar-o" aria-hidden="true"></i>24 августа 2015		
-											<span class="sep">/</span><i class="fa fa-comment-o" aria-hidden="true"></i> 1 комментарий 	
-										</div>
-									</div>
-									<h2 class="post-title"><a href="single-post.html">Hello world!</a></h2>
-								</div>
-							</div>	
-						</div>
+						<?php endwhile; else : ?>
+							<p>Записей нет.</p>
+						<?php endif; ?>
 						<!-- Pagination -->
-						<div class="text-center">
-							<ul class="pagination">
-								<li class="disabled"><span>«</span></li>
-								<li class="active"><span>1</span></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#">»</a></li>
-							</ul>
-						</div>	
+						<?php sd_pagination(); ?>						
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="widget-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-6">
-						<div class="widget-left">
-							<h3 class="widget-title">Поиск</h3>	
-							<!-- Search form -->
-				<form role="search" class="navbar-form navbar-left" method="get" action="#">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Найти">
-					</div>
-						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>                            
-				</form>  
-						</div>
-					</div>			
-					
-					<div class="col-md-6 col-sm-6 col-xs-6">
-						<div class="widget-right">
-							<h3 class="widget-title">Мы в соцсетях</h3>
-							<ul class="social-icon">
-								<li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+		
 	<?php get_footer();?>		
