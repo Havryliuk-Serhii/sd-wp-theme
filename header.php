@@ -32,14 +32,15 @@
 					<a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="logo"></a>
 				</div>
 			<!-- Menu -->
-				<div  class="navbar-collapse collapse navbar-right">
-					<?php wp_nav_menu( array(
-								'theme_location' => 'primary',
-								'container' => false, 
-								'menu_class' => 'nav nav-pills',			
-							) );
-						?>
-				</div>				
+				<?php 
+					wp_nav_menu( array(
+						'theme_location'  => 'primary',
+						'container'       => 'div',
+						'container_class' => 'navbar-collapse collapse navbar-right',
+						'menu_class' => 'nav nav-pills',
+						
+					) );
+				?>						
 			</div>
 		</div>
 		
