@@ -20,7 +20,7 @@
 <body>
 	<div class="wrapper">
 		<!-- Header -->
-		<div class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,12 +37,14 @@
 						'theme_location'  => 'primary',
 						'container'       => 'div',
 						'container_class' => 'navbar-collapse collapse navbar-right',
-						'menu_class' => 'nav nav-pills',
-						
+						'menu_class' => 'nav nav-pills',						
 					) );
 				?>						
 			</div>
-		</div>
-		
+		</nav>
+		<div class="content">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12 col-sm-12 col-xs-12">
 
 				

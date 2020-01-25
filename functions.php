@@ -27,10 +27,11 @@ function load_sd_style_scripts() {
 	wp_enqueue_style( 'main-sd_style', get_template_directory_uri() . '/css/main.css' );
 	wp_enqueue_style( 'media-sd_style', get_template_directory_uri() . '/css/media.css' );
 	//Подключение скриптов
-	wp_enqueue_script( 'jquery-my',  get_template_directory_uri() . '/js/jquery-3.4.1.min.js', '' ,'3.4.1', true);
-	wp_enqueue_script( 'wpbootstrap-min-script', get_template_directory_uri() . '/js/bootstrap.min.js','', null, true );	
+	wp_enqueue_script( 'jquery-my',  get_template_directory_uri() . '/js/jquery-3.4.1.min.js', array(),'3.4.1', true);
+	wp_enqueue_script( 'wpbootstrap-min-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(), null, true );	
 }
 add_action( 'wp_enqueue_scripts', 'load_sd_style_scripts' );
+
 
 /**
  * Пагинация
@@ -40,7 +41,7 @@ function sd_pagination( $args = array() ) {
     
     $defaults = array(
         'range'           => 4,
-        'custom_query'    => FALSE,
+        'custom_query'    => false,
         'previous_string' => __( '«', 'text-domain' ),
         'next_string'     => __( '»', 'text-domain' ),
         'before_output'   => '<div class="text-center"><ul class="pagination">',
@@ -106,3 +107,6 @@ function sd_pagination( $args = array() ) {
     if ( isset($echo) )
         echo $args['before_output'] . $echo . $args['after_output'];
 }
+/**
+*
+*/

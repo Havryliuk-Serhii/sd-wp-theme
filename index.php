@@ -1,8 +1,5 @@
 <?php get_header(); ?>
-<div class="content">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12">
+
 						<!-- Slider -->
 						<div class="slideshow">
 							<div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
@@ -66,9 +63,5 @@
 						<?php endif; ?>
 						<!-- Pagination -->
 						<?php sd_pagination(); ?>						
-					</div>
-				</div>
-			</div>
-		</div>
-		
+
 	<?php get_footer();?>		
