@@ -498,6 +498,7 @@ blockquote>p>cite {
   padding: 5px 8px;
   border-radius: 5px;
 }
+
 /*  Comments */
 
 .comments-title{
@@ -547,7 +548,11 @@ blockquote>p>cite {
 }
 
 /* Comments form */
-
+.logged-in-as a:hover{
+  background-color: #336600;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
 .blog-form .form-control {
   margin-bottom: 15px;
   border: 1px solid 7ebc7d;
@@ -563,10 +568,14 @@ blockquote>p>cite {
   border: 1px solid #360;
   background-color: #7ebc7d;
 }
-
-.left_contact input[type=text]:hover, textarea:hover {
-  border: 1px #360;
-  background-color:#7ebc7d;
+.form-group{
+  margin-bottom: 0;
+}
+textarea.form-control{
+  resize: none;
+}
+#wp-comment-cookies-consent{
+  height: 0;
 }
 /* Button submit */
 .btn-main {
@@ -665,6 +674,7 @@ blockquote>p>cite {
   border-top: 1px solid #555;
   height: 40px;
 	top: -40px;
+  width: 100%;
 }
 .footer p {
   font-size: 18px;

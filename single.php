@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-	<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
+	<?php if (have_posts()) :
+		while (have_posts()) : the_post(); ?>
 		<article class="article" id="post-<?php the_ID(); ?>">
 		    <div class="general-image">
 	           <?php the_post_thumbnail(); ?>
@@ -12,7 +13,7 @@
                     	    <span class="date-post"><?php the_time('j M, Y')?></span>
                     	</div>
                     	<div class="col-md-4 col-sm-12 col-xs-12">
-                        	<p class="post-author">Автор <a href="<?php the_permalink(); ?>" class="text-link"><?php the_author() ?></a></p>  
+                        	<p class="post-author">Автор : <a href="<?php the_permalink(); ?>" class="text-link"><?php the_author() ?></a></p>  
                     	</div>
                     	<div class="col-md-4 col-sm-12 col-xs-12">
 	                        <ul class="social-icon-head">
@@ -26,10 +27,16 @@
             	<?php the_content(); ?>
     		</div>
     	</article>
-    	<?php if ( comments_open() || get_comments_number() ) :
+        <div class="post-navigation">
+            <div class="row">
+              <?php the_post_navigation(); ?>  
+            </div>
+        </div>        
+        <?php if ( comments_open() || get_comments_number() ) :
 				comments_template();
 		?>
 		<?php endif; ?>  
 <?php endwhile; ?>
 <?php endif; ?>
+
 <?php get_footer();?>	
