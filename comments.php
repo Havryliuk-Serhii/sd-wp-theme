@@ -19,13 +19,13 @@
 			<?php endif; // check for comment navigation ?>
  
 			<ul class="media-list">
-                <li class="media">
-					<?php
-						wp_list_comments();
-					?>
-				</li>                                           
-            </ul>   
- 
+               	<?php
+					wp_list_comments(array(
+							'callback' => 'sd_list_comment',
+					));
+				?>	                            
+            </ul>  
+       		                         
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 						<div class="navigation">
 							<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Старые коментарии', 'sd' ) ); ?></div>
@@ -43,24 +43,6 @@
 </div>
 <div class="blog-form">
 	<?php 
-	add_filter('comment_form_fields', 'sd_reorder_comment_fields' );
-function sd_reorder_comment_fields( $fields ){
-	
-
-	$new_fields = array(); 
-
-	$myorder = array('author','email','comment'); 
-	foreach( $myorder as $key ){
-		$new_fields[ $key ] = $fields[ $key ];
-		unset( $fields[ $key ] );
-	}
-
-	if( $fields )
-		foreach( $fields as $key => $val )
-			$new_fields[ $key ] = $val;
-
-	return $new_fields;
-}
 		$comments_args = array(
 					'fields' => array (
 							'author' => '<div class="form-group"><div class="col-md-6">' . '<input type="text" class="form-control" id="author" name="author" placeholder="Имя"' . esc_attr( $commenter['comment_author'] ) . $aria_req . $html_req . ' /></div></div>',

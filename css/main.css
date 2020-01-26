@@ -8,7 +8,7 @@ body {
 	padding: 0;
 	border: none;
 	color: #222;
-	background: url(../images/stone-texture-0291.jpg) repeat;
+	background: url(http://sd.loc/wp-content/uploads/2020/01/stone-texture-0291.jpg) repeat;
 }
 
 ul{
@@ -534,10 +534,7 @@ blockquote>p>cite {
   color: #fff;
   background: #360;
   border-radius: 5px;
-}
-
-.media-list li{
-  margin-bottom: 30px;
+  padding: 5px 8px;
 }
 
 .media-left img {
@@ -546,7 +543,15 @@ blockquote>p>cite {
   border-radius: 50%;
   border: 5px solid #f1f1f1;     
 }
-
+.media{
+  padding-bottom: 10px;
+}
+.reply a:hover{
+  color: #fff;
+  background: #336600;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
 /* Comments form */
 .logged-in-as a:hover{
   background-color: #336600;
