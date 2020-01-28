@@ -9,27 +9,26 @@
 									<li data-target="#myCarousel" data-slide-to="2"></li>
 								</ol>   
 								<div class="carousel-inner">
-									<div class="active item">
-										<img src="images/jardinier.jpg" alt="">
-										<div class="carousel-caption">                               
-											<h2 class="carousel-post-title"><a href="single-post.html">Заголовок 1 слайда</a></h2>
-											<p>Текст (описание) 1 слайда...</p>
-										</div>
-									</div>
+									<?php $slidecount = sd_of_get_option('sd_slide_count','2'); ?>
+									<?php $slidecat = sd_of_get_option('sd_slide_cat','1'); ?>
+
+				<?php
+					$args = array( 'posts_per_page' => $slidecount , 'cat' => $slidecat  );
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 									<div class="item">
-										<img src="images/Rock-Garden.jpg" alt="">
-										<div class="carousel-caption">							
-											<h2 class="carousel-post-title"><a href="single-post.html">Second slide label</a></h2>
-											<p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
-										</div>
-									</div>
-									<div class="item">
-										<img src="images/keokenhof-gardens.jpg" alt="">
+										<?php 
+											$thumb = get_post_thumbnail_id();
+											$img_url = wp_get_attachment_url( $thumb,'full' );
+										?>
+										<img src="<?php echo $img_url ?>" alt="<?php the_title(); ?>">
 										<div class="carousel-caption">                               
-											<h2 class="carousel-post-title"><a href="single-post.html">Third slide label</a></h2>
-											<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+											<h2 class="carousel-post-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+											<?php the_excerpt() ?>
 										</div>
 									</div>
+									<?php endwhile;
+			     						 ?>								
 								</div>
 									<!-- Carousel navigation -->
 								<a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -58,7 +57,8 @@
 							    </div>	
 						    </div>
 						</div>
-						<?php endwhile; else : ?>
+						<?php endwhile; 
+							else : ?>
 							<p>Записей нет.</p>
 						<?php endif; ?>
 						<!-- Pagination -->

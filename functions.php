@@ -23,15 +23,14 @@ function load_sd_style_scripts() {
 	//Подключение стилей
 	wp_enqueue_style( 'sd-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bts-sd_style', get_template_directory_uri() . '/css/bootstrap.css' );
-	wp_enqueue_style( 'fontawesome-sd_style', get_template_directory_uri() . '/css/font-awesome.css' );
+	wp_enqueue_style( 'fontawesome-sd_style', get_template_directory_uri() . '/css/fontawesome.min.css' );
 	wp_enqueue_style( 'main-sd_style', get_template_directory_uri() . '/css/main.css' );
 	wp_enqueue_style( 'media-sd_style', get_template_directory_uri() . '/css/media.css' );
 	//Подключение скриптов
 	wp_enqueue_script( 'jquery-my',  get_template_directory_uri() . '/js/jquery-3.4.1.min.js', array(),'3.4.1', true);
-	wp_enqueue_script( 'wpbootstrap-min-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(), null, true );	
+	wp_enqueue_script( 'wpbootstrap-min-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(), '3.3.5', true );	
 }
 add_action( 'wp_enqueue_scripts', 'load_sd_style_scripts' );
-
 
 /**
  * Пагинация
@@ -184,4 +183,28 @@ function sd_list_comment( $comment, $args, $depth ) {
 	<?php if ( 'div' != $args['style'] ) { ?>
 	</li>	
 	<?php }
+}
+
+
+if ( ! function_exists( 'sd_all_option' ) ) {
+	function sd_all_option()
+	{
+		return get_option('ft_op');
+	}
+}
+if ( ! function_exists( 'sd_of_get_option' ) ) {
+	function sd_of_get_option( $name, $default = false )
+	{
+			$config = sd_all_option();
+
+			if ( ! isset( $config['id'] ) )
+				return $default;
+
+			$options = get_option( $config['id'] );
+
+			if ( isset( $options[$name] ) )
+				return $options[$name];
+
+			return $default;
+	}
 }
