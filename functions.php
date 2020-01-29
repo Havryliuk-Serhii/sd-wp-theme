@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'sadoviy_decor_setup' ) ) :
+if ( ! function_exists( 'sd_setup' ) ) :
 	function sd_setup() {
 		add_theme_support( 'post-thumbnails' );
 		register_nav_menus( array(
@@ -222,28 +222,11 @@ if ( ! function_exists( 'sd_of_get_option' ) ) {
 /**
 *  Регистрация виджетов в футере
 */
-function footer_widget_left(){
-	register_sidebar( array(
-		'name' 			=> 'Футер виджет левый',
-		'id' 			=> 'widget-left',
-		'class'         => 'widget-left',
-		'description' 	=> 'Выводиться внизу перед футером только на главной странице сайта.',
-		'before_widget' => '<div class="col-md-6 col-sm-6 col-xs-6">',
-		'after_widget' 	=> '</div>',
-		'before_title'	=> '<h3 class="widget-title">',
-		'after_title'	=> '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'footer_widget_left' );
-
 function footer_widget_right(){
 	register_sidebar( array(
 		'name' 			=> 'Футер виджет правый',
-		'id' 			=> 'widget-right',
 		'class'         => 'widget-right',
-		'description' 	=> 'Выводиться внизу перед футером только на главной странице сайта.',
-		'before_widget' => '<div class="col-md-6 col-sm-6 col-xs-6">',
-		'after_widget' 	=> '</div>',
+		'description' 	=> 'Используйте виджет Текст для добавления HTML-кода иконок',
 		'before_title'	=> '<h3 class="widget-title">',
 		'after_title'	=> '</h3>',
 	) );
