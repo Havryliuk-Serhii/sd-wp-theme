@@ -64,6 +64,18 @@
 							<p>Записей нет.</p>
 						<?php endif; ?>
 						<!-- Pagination -->
-						<?php sd_pagination(); ?>						
-
+						<?php sd_pagination(); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="widget-area">
+		<div class="container">
+			<div class="row">
+				<?php dynamic_sidebar('footer_widget_left'); ?>
+				<?php dynamic_sidebar('footer_widget_right'); ?>
+			</div>
+		</div>
+	</div>
 	<?php get_footer();?>		
