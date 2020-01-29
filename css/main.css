@@ -388,7 +388,14 @@ a:hover{
   background: #fff;
   padding: 2em;
 }
-
+.entry-content{
+  width: 85%;
+  height: auto;;
+  margin: 0 auto;
+  z-index: 200;
+  background: #fff;
+  padding: 2em;
+}
 .post-main h2 {
   margin-top: 10px;
   margin-bottom: 10px;
