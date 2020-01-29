@@ -15,8 +15,9 @@
 				<?php
 					$args = array( 'posts_per_page' => $slidecount , 'cat' => $slidecat  );
 					$loop = new WP_Query( $args );
+					$count = 0;
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-									<div class="item">
+									<div class="item <?php echo esc_attr( $count == 0 ? 'active' : '' ); ?>">
 										<?php 
 											$thumb = get_post_thumbnail_id();
 											$img_url = wp_get_attachment_url( $thumb,'full' );
@@ -24,10 +25,11 @@
 										<img src="<?php echo $img_url ?>" alt="<?php the_title(); ?>">
 										<div class="carousel-caption">                               
 											<h2 class="carousel-post-title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
-											<?php the_excerpt() ?>
 										</div>
 									</div>
-									<?php endwhile;
+									<?php 
+										$count++;
+										endwhile;
 			     						 ?>								
 								</div>
 									<!-- Carousel navigation -->

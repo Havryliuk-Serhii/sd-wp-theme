@@ -16,6 +16,15 @@ if ( ! function_exists( 'sadoviy_decor_setup' ) ) :
 	}		
 endif;
 add_action( 'after_setup_theme', 'sd_setup' );
+
+
+function sd_stop_loading_wp_embed_and_jquery ( ) {
+if ( ! is_admin ( ) ) {
+		wp_deregister_script ( 'wp-embed' ) ;
+		wp_deregister_script ( 'jquery' ) ;    
+	}
+}
+add_action ( 'init' , 'sd_stop_loading_wp_embed_and_jquery' ) ;
 /**
  * Подключение скриптов и стилей
  */
@@ -28,7 +37,7 @@ function load_sd_style_scripts() {
 	wp_enqueue_style( 'media-sd_style', get_template_directory_uri() . '/css/media.css' );
 	//Подключение скриптов
 	wp_enqueue_script( 'jquery-my',  get_template_directory_uri() . '/js/jquery-3.4.1.min.js', array(),'3.4.1', true);
-	wp_enqueue_script( 'wpbootstrap-min-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(), '3.3.5', true );	
+	wp_enqueue_script( 'wpbootstrap-min-script', get_template_directory_uri() . '/js/bootstrap.min.js',array(), '3.3.7', true );
 }
 add_action( 'wp_enqueue_scripts', 'load_sd_style_scripts' );
 
@@ -185,7 +194,9 @@ function sd_list_comment( $comment, $args, $depth ) {
 	<?php }
 }
 
-
+/**
+*  Параметры резервирования
+*/
 if ( ! function_exists( 'sd_all_option' ) ) {
 	function sd_all_option()
 	{
