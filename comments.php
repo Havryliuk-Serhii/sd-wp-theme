@@ -1,4 +1,3 @@
- 
 <div class="comments">
 			<?php if ( post_password_required() ) : ?>
 				<p class="nopassword"><?php _e( 'Этот пост защищен паролем. Введите пароль чтобы просмотеть комментарии.', 'sd' ); ?></p>
