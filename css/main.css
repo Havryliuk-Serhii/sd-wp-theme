@@ -633,4 +633,11 @@ textarea.form-control{
   text-align: center;
   margin-top: 10px;    
 }
+/*====================
+  404
+===================*/
+.backlink:hover,
+.backlink:active{
+  text-shadow: #336600 3px 3px 3px;
+}
 
