@@ -232,3 +232,61 @@ function footer_widget_right(){
 	) );
 }
 add_action( 'widgets_init', 'footer_widget_right' );
+
+/**
+*  Иконки соцсетей
+**/
+function vk_icon_options(){
+		add_settings_field(
+		'vk', 
+		'Вконтакте', 
+		'display_vk_icon',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'vk_icon' 
+	);
+}
+add_action('admin_init', 'vk_icon_options');
+function display_vk_icon(){
+	echo "<input type='text' class='regular-text' name='vk_icon' value='" . esc_attr(get_option('vk_icon')) . "'>";
+}
+
+function ok_icon_options(){
+		add_settings_field(
+		'ok', 
+		'Одноклассники', 
+		'display_ok_icon',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'ok_icon' 
+	);
+}
+add_action('admin_init', 'ok_icon_options');
+function display_ok_icon(){
+	echo "<input type='text' class='regular-text' name='ok_icon' value='" . esc_attr(get_option('ok_icon')) . "'>";
+}
+
+function fb_icon_options(){
+		add_settings_field(
+		'fb', 
+		'Facebook', 
+		'display_fb_icon',
+		'general' 
+	);
+    
+	register_setting(
+		'general', 
+		'fb_icon' 
+	);
+}
+add_action('admin_init', 'fb_icon_options');
+function display_fb_icon(){
+	echo "<input type='text' class='regular-text' name='fb_icon' value='" . esc_attr(get_option('fb_icon')) . "'>";
+}
+

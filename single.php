@@ -17,9 +17,9 @@
                     	</div>
                     	<div class="col-md-4 col-sm-12 col-xs-12">
 	                        <ul class="social-icon-head">
-	                    	    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-	                        	 <li><a href="#"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
-	                            <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+	                    	    <li><a href="<?php echo get_option('fb_icon'); ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+	                        	 <li><a href="<?php echo get_option('ok_icon'); ?>"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+	                            <li><a href="<?php echo get_option('vk_icon'); ?>"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
 	                        </ul>
                     	</div>
                 	</div>                
